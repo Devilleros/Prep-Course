@@ -43,6 +43,14 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var y = s.split("");
+  s1 = ""; s2 = "";
+  y.forEach(a => {
+    if(a === a.toUpperCase()){
+      s1 = s1 + a;
+    }else{s2 = s2 + a;}
+  });
+  return (s1 + s2);
 }
 
 
@@ -52,6 +60,17 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var x = str.split(" ");
+  var z = "";
+  x.forEach(a => {
+    let y = a.split("");
+    for(let i = 0; i< y.length ; i++){
+      z = z+ y[y.length-i-1];
+    };
+    z=z+(" ");
+  });
+  z = z.substring(0,z.length-1);
+  return z
 } 
 
 
